@@ -10,6 +10,5 @@ const routes = require('./routes');
 // http.createServer(function(req, res) {
     
 // });
-
 const server = http.createServer(routes.handler); // if not multiple func or keys to export then simply use routes(the one exported) here we used routes.handler coz we have exported multiple key values
 server.listen(3000);
