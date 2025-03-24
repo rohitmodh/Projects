@@ -4,13 +4,13 @@ const path = require('path');
 const rootDir = require('../util/path');
 const router = express.Router();
 
+const adminData = require('./admin');
+
 router.get('/', (req, res, next) => {
-    //res.send('<h1>Hello from express Js</h1>');    
-    //sending html pages as response
-    //res.sendFile('/views/shop.html'); // this wont work as / represents root directory of os, not the project and thus we need to make use of another core module of node js - path
-    //res.sendFile(path.join(__dirname, '../', 'views', 'shop.html')); // __dirname is global variable holding abs path on our os to this project folder.
-    res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+    // console.log('shopjs', adminData.products);
+    // res.sendFile(path.join(rootDir, 'views', 'shop.html'));
+    const products = adminData.products;
+    res.render('shop', {prods: products, docTitle: 'Shop', path: '/shop'});
 });
-    
 
 module.exports = router;
