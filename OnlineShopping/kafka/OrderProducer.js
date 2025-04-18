@@ -36,6 +36,7 @@ const publishProductCreated = async (product) => {
     topic: 'product-events',
     messages: [{ key: product.id, value: JSON.stringify(product) }],
   });
+  console.log(`✅ product published.`);
 };
 
 module.exports = {
