@@ -33,6 +33,8 @@ const ensureTopicExists = async (topicName) => {
     //this is code to test git webhook and api
     console.log(`✅ Kafka topic exists: ${topicName}`);
     console.log(`✅ Kafka topic git change exists: ${topicName}`);
+    
+    console.log(`✅ Kafka topic git change exists: ${topicName}`);
   }
 };
 
