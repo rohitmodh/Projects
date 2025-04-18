@@ -12,6 +12,7 @@ const connectProducer = async () => {
   await producer.connect();
   await admin.connect();
   console.log("Kafka Producer and Admin connected");
+  console.log("Kafka Producer and Admin connected");
 };
 
 const disconnectProducer = async () => {
@@ -27,6 +28,9 @@ const ensureTopicExists = async (topicName) => {
     });
     console.log(`✅ Created Kafka topic: ${topicName}`);
   } else {
+    console.log(`✅ Kafka topic exists: ${topicName}`);
+    
+    //this is code to test git webhook and api
     console.log(`✅ Kafka topic exists: ${topicName}`);
   }
 };
