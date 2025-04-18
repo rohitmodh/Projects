@@ -36,6 +36,10 @@ module.exports = class Product {
   }
 
   static fetchAll(cb) {
+    console.log('Fetching all products from file');
     getProductsFromFile(cb);
+  }
+  static delete(cb){
+    console.log('deleting all products from file');
   }
 };
