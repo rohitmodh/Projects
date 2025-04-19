@@ -36,6 +36,9 @@ const ensureTopicExists = async (topicName) => {
         if(topics.includes(topicName)){
           //add some business logic
         }
+        if(topics.includes(topicName)){
+          //add some business logic
+        }
   }
 };
 
